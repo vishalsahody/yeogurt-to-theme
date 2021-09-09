@@ -12,7 +12,7 @@ gulp.task('watch', (done) => {
     gulp.watch([
       `${dirs.source}/${dirs.styles}/**/*.{scss,sass}`,
       `${dirs.source}/${dirs.modules}/**/*.{scss,sass}`,
-    ], gulp.series('sass'));
+    ], gulp.series(['sass','copycssacross']));
 
     // Pug Templates
     gulp.watch([
@@ -30,7 +30,19 @@ gulp.task('watch', (done) => {
     // Images
     gulp.watch([
       `${dirs.source}/${dirs.images}/**/*.{jpg,jpeg,gif,svg,png}`,
-    ], gulp.series('imagemin'));
+    ], gulp.series('imagemin', 'copyimagesacross'));
+
+    
+    // Typography
+    gulp.watch([
+        `${dirs.source}/typography/**/*.{ttf,woff,eot,svg}`,
+      ], gulp.series('copyfontsacross'));
+
+    
+    // JS
+    gulp.watch([
+        `${dirs.temporary}/scripts/**/*.{js,map}`,
+      ], gulp.series('copyjsacross'));
 
     // All other files
     gulp.watch([
