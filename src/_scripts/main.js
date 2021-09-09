@@ -3,9 +3,7 @@
 
 'use strict';
 
-import 'core-js';
-import 'regenerator-runtime/runtime';
-import $ from 'jquery';
+import $ from 'jquery'; // Make sure this is removed and jQuery is used from the website
 import { Link } from '../_modules/link/link';
 
 $(() => {
