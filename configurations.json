@@ -13,5 +13,5 @@
             "typography": "/tmp/sync-test/docroot/themes/custom/mytheme/typography"
         }
     },
-    "copyacross": true
+    "copyacross": false
 }
