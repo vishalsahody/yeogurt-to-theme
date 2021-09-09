@@ -1,12 +1,13 @@
-# Sample readme
+# Yeogurt to Theme
+THe aim of this project is to provide a Frontend Framework that can be easily extended to build Static websites, App and Themes. This project started as a mean to easily build Drupal theme.
 
-Generated on 2021-09-09 using
-[generator-yeogurt@3.1.2](https://github.com/larsonjj/generator-yeogurt)
+## How to use?
+Once checkouted you need to set the path where the assets will be copied across in the `configurations.json`. If you wish to also copy the assets to a remote location that support SFTP, you should first enable `"copyacross": true` in the `configurations.json` and define the remote path in the same file. You will also need to make a copy of the `credentials.blank.json` and rename it `credentials.json`. In the `credentials.json` file you will define the SFTP credentials.
 
-## Description
+With the configurations done, run `npm i` (you need to have node.js installed). The framework has been tested on node `14.17.6`. If everything installed successfully you can run `gulp serve` and start coding.
 
-This is an example readme file.
-Describe your site/app here.
+As the name suggest, this framework uses `yeogurt` and more information about that here [generator-yeogurt@3.1.2](https://github.com/larsonjj/generator-yeogurt).
+
 
 ## Technologies used
 
