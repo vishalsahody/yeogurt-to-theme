@@ -8,55 +8,11 @@ With the configurations done, run `npm i` (you need to have node.js installed). 
 
 As the name suggest, this framework uses `yeogurt` and more information about that here [generator-yeogurt@3.1.2](https://github.com/larsonjj/generator-yeogurt).
 
+## How to add font icons?
+Under `src\typography\icons` there is a bunch of files. The most important one is the `selection.json` which is the font icons collection definition. This file is used on [icomoon](https://icomoon.io/app/#/select). After adding/substraction from the set you download a zip file which should be unzipped directly in `src\typography\icons`. Stop and re-run `gulp serve` just to make sure it copies everything accross.
 
-## Technologies used
-
-JavaScript
-
-- [Browserify](http://browserify.org/)with ES6/2015 support through [Babel](https://babeljs.io/)
-- [Node](https://nodejs.org/)
-
-Styles
-
-- [Sass](http://sass-lang.com/) via ([node-sass](https://github.com/sass/node-sass))
-
-Markup
-
-- [Pug](https://pugjs.org/api/reference.html)
-
-Optimization
-
-- [Imagemin](https://github.com/imagemin/imagemin)
-- [Uglify](https://github.com/mishoo/UglifyJS)
-
-Server
-
-- [BrowserSync](http://www.browsersync.io/)
-
-Linting
-
-- [ESlint](http://eslint.org/)
-
-Automation
-
-- [Gulp](http://gulpjs.com)
-
-Code Management
-
-- [Editorconfig](http://editorconfig.org/)
-- [Git](https://git-scm.com/)
-
-## Automated tasks
-
-This project uses [Gulp](http://gulpjs.com) and npm scripts (i.e. `npm run...`) to run automated tasks for development and production builds.
-The tasks are as follows:
-
-`npm run build`: Build a production version of your site/app
-
-`npm run serve`: Compiles preprocessors and boots up development server
-`npm run serve -- --open`: Same as `npm run serve` but will also open up site/app in your default browser
-`npm run serve:prod`: Same as `npm run serve` but will run all production tasks so you can view the site/app in it's final optimized form
-
-`npm test`: Lints all `*.js` file in the `source` folder using eslint
-
-**_Adding the `-- --debug` option to any npm script command to display extra debugging information (ex. data being loaded into your templates)_**
+## Todo
+- [ ] Assets are not currently compiling on production build `gulp serve --production`
+- [ ] Test on Drupal build
+- [ ] Test on Wordpress build
+- [ ] Test on Hybrid application build
