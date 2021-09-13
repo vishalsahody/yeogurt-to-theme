@@ -5,3 +5,10 @@ tmp
 .grunt
 .DS_Store
 credentials.json
+
+
+# Include these on the website level to avoid conflict
+main.css
+main.css.map
+main.js
+main.js.map
