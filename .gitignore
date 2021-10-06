@@ -12,3 +12,5 @@ main.css
 main.css.map
 main.js
 main.js.map
+main.dev*.js
+main.dev*.scss
